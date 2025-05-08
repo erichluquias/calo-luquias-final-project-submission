@@ -1,0 +1,62 @@
+[
+  {
+    "username": "herro",
+    "profilePic": "https://i.pinimg.com/1200x/af/5f/4a/af5f4ad22cf294628b6550b41585e873.jpg",
+    "password": "herr000"
+  },
+  {
+    "username": "test1",
+    "profilePic": "https://i.pinimg.com/1200x/f5/5b/d3/f55bd36954a82a9dabc4a1644c982c7c.jpg",
+    "password": "testinglogin"
+  },
+  {
+    "username": "mischkaproplayer123",
+    "profilePic": "https://i.pinimg.com/736x/95/4d/7c/954d7cc294c5c2b3c504baaef9184651.jpg",
+    "password": "Mischka@131",
+    "savedOutfits": [
+      {
+        "top": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top5.PNG?v=1738761296790",
+        "bottom": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom4.PNG?v=1738758195729",
+        "accessory": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes4.PNG?v=1738761250518"
+      },
+      {
+        "top": "https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/top1.PNG?v=1734860009241",
+        "bottom": "https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/bottom1.PNG?v=1734859995920",
+        "accessory": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes7.PNG?v=1738758205423"
+      },
+      {
+        "top": "https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/top1.PNG?v=1734860009241",
+        "bottom": "https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/bottom2.PNG?v=1734860007074",
+        "accessory": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes2.PNG?v=1738761252746"
+      },
+      {
+        "top": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top6.PNG?v=1738758221108",
+        "bottom": "https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/bottom1.PNG?v=1734859995920",
+        "accessory": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes7.PNG?v=1738758205423"
+      },
+      {
+        "top": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top6.PNG?v=1738758221108",
+        "bottom": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom5.PNG?v=1738758209147",
+        "accessory": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes2.PNG?v=1738761252746"
+      }
+    ]
+  },
+  {
+    "username": "alice",
+    "profilePic": "profile.jpg",
+    "password": "1234",
+    "savedOutfits": []
+  },
+  {
+    "username": "unicorn",
+    "profilePic": "",
+    "password": "123",
+    "savedOutfits": [
+      {
+        "top": "https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/top1.PNG?v=1734860009241",
+        "bottom": "https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/bottom1.PNG?v=1734859995920",
+        "accessory": "https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes6.PNG?v=1738758203887"
+      }
+    ]
+  }
+]
