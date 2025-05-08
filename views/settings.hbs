@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/style.css">
+
+<!-- TOP NAV -->
+<div class="settings-navbar">
+  <div class="nav-left">
+    <a href="/" class="hamburger-link">Home</a>
+  </div>
+  <div class="nav-center">Meya’s Vogue : Settings</div>
+  <div class="nav-right">
+    <img src="{{user.profilePic}}" alt="Profile" class="navbar-pfp">
+  </div>
+</div>
+
+<!-- SETTINGS FORM -->
+<div class="settings-container">
+  <form action="/update-user" method="POST" class="settings-form">
+    <!-- Profile Image + Upload -->
+    <div class="profile-box">
+      <img src="{{user.profilePic}}" alt="Profile Picture" class="form-pfp">
+      <label>Upload/Change Photo</label>
+      <input type="text" name="profilePic" value="{{user.profilePic}}" required>
+    </div>
+
+    <!-- Form Fields -->
+    <div class="form-fields">
+      <label>Username:</label>
+      <input type="text" name="newUsername" value="{{user.username}}" required>
+
+      <label>Password:</label>
+      <input type="password" id="password" name="password" value="{{user.password}}" required>
+
+      <label style="font-size: 0.9em; margin-top: 5px;">
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+      </label>
+
+      <input type="hidden" name="originalUsername" value="{{user.username}}">
+      <button type="submit" class="save-btn">Save</button>
+    </div>
+  </form>
+
+  <!-- Delete & Logout Buttons -->
+  <div class="settings-actions">
+    <form action="/delete-user" method="POST" onsubmit="return confirm('Are you sure you want to delete your account?')">
+      <input type="hidden" name="username" value="{{user.username}}">
+      <button type="submit" class="delete-btn">🗑️ Delete Account</button>
+    </form>
+
+    <a href="#" onclick="logoutUser()" class="logout-link">💕 Log Out</a>
+  </div>
+</div>
+
+<script>
+  function logoutUser() {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "/";
+  }
+
+  function togglePassword() {
+    const pwField = document.getElementById("password");
+    pwField.type = pwField.type === "password" ? "text" : "password";
+  }
+</script>

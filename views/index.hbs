@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/style.css">
+
+<div class="form-wrapper">
+  <h2>Create Profile</h2>
+
+  <form action="/add-user" method="POST" class="profile-form">
+    <label>Username:</label><br>
+    <input type="text" name="username" required><br><br>
+
+    <label>Profile Picture URL:</label><br>
+    <input type="text" name="profilePic"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="passwordInput" name="password" required><br><br>
+
+    <div class="show-password">
+      <input type="checkbox" id="togglePassword">
+      <label for="togglePassword">Show Password</label>
+    </div>
+
+    <br>
+    <button type="submit" class="save-button">Save</button>
+  </form>
+
+  <p style="text-align: center; margin-top: 20px;">
+    Already have an account?
+    <a href="/login" class="start-button" style="color: #ff69b4;">Log in here 💻</a>
+  </p>
+</div>
+
+<script>
+  const toggle = document.getElementById("togglePassword");
+  const pwdInput = document.getElementById("passwordInput");
+
+  toggle.addEventListener("change", () => {
+    pwdInput.type = toggle.checked ? "text" : "password";
+  });
+</script>

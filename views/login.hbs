@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/style.css">
+
+<div class="form-wrapper">
+  <h2>Log In</h2>
+
+  {{#if error}}
+    <p style="color: red;">{{error}}</p>
+  {{/if}}
+
+  <form action="/login" method="POST" class="profile-form">
+    <label>Username:</label><br>
+    <input type="text" name="username" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="passwordInput" name="password" required><br><br>
+
+    <div class="show-password">
+      <input type="checkbox" id="togglePassword">
+      <label for="togglePassword">Show Password</label>
+    </div>
+
+    <br>
+    <button type="submit" class="save-button">Log In</button>
+  </form>
+
+  <p style="text-align: center; margin-top: 20px;">
+    No account yet? <a href="/" class="start-button">Register here</a>
+  </p>
+</div>
+
+{{#if user}}
+  <script>
+    // Save user data in localStorage & redirect
+    const user = {
+      username: "{{user.username}}",
+      profilePic: "{{user.profilePic}}"
+    };
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+    window.location.href = "/settings/" + user.username;
+  </script>
+{{/if}}
+
+<script>
+  // Password toggle
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("togglePassword");
+    const pwdInput = document.getElementById("passwordInput");
+
+    if (toggle && pwdInput) {
+      toggle.addEventListener("change", () => {
+        pwdInput.type = toggle.checked ? "text" : "password";
+      });
+    }
+  });
+</script>
