@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Design your outfit in the Dressing Room!"
+    />
+    <meta name="author" content="Erich Amia Luquias, Mischka Calo" />
+    <title>Dressing Room - Meya's Vogue</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/favicon.png?v=1734875600934"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="dressingstyle.css" />
+  </head>
+
+  <body>
+    <div class="top-right-profile">
+      <a id="profileDynamicLink" href="/form">
+        <img
+          id="profileDynamicPic"
+          src="https://your-default-image-url.png"
+          alt="Profile"
+          class="profile-icon"
+        />
+      </a>
+    </div>
+
+    <header>
+      <h1>Welcome to Meya's Vogue!</h1>
+      <!-- Hamburger Menu Button -->
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+      <h2>Saved Outfits</h2>
+      <ul id="saved-outfits-list"></ul>
+
+      <nav id="nav-menu">
+        <a href="index.html">Home 🏠</a>
+        <a href="dressing-room.html">Dressing Room 👗</a>
+        <a href="gallery.html">Gallery 🖼️</a>
+        <a href="tasks.html">Tasks 📝</a>
+        <a href="about-us.html">About Us ℹ️</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Create Your Perfect Look ! ⋆౨ৎ˚⟡˖ ࣪</h2>
+      <p>
+        The Dressing Room is where users can create outfits for the virtual
+        model. Users can choose clothing items like tops, pants, and accessories
+        by clicking on images. Once they click, the items will appear on the
+        model right away, so they can see how the outfit looks instantly. This
+        makes it easy to mix and match different clothes and create unique
+        styles.
+      </p>
+
+      <audio id="bg-music" autoplay loop controls>
+        <source
+          src="https://cdn.glitch.me/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/dressupbg?v=1738476588838"
+          type="audio/mp3"
+        />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="game-container">
+        <!-- Model Display -->
+        <div id="model-container">
+          <img
+            id="model-base"
+            src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/model.png?v=1734687501623"
+            alt="Model Base"
+          />
+          <div id="top-layer"></div>
+          <div id="bottom-layer"></div>
+          <div id="accessory-layer"></div>
+        </div>
+
+        <!-- Sidebar Menu (Right) -->
+        <div class="dress-sidebar">
+          <button class="category-btn" id="top-btn">👗</button>
+          <button class="category-btn" id="bottom-btn">👖</button>
+          <button class="category-btn" id="accessory-btn">👠</button>
+        </div>
+
+        <!-- Options Panel (Left) -->
+        <div class="options-panel">
+          <div class="clothing-selection" id="top-options">
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/top1.PNG?v=1734860009241"
+              alt="Top 1"
+            />
+
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/top2.PNG?v=1734860011421.png?v=1734680256176"
+              alt="Top 2"
+            />
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top3.PNG?v=1738761298907"
+              alt="Top 3"
+            />
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top4.PNG?v=1738758200499"
+              alt="Top 4"
+            />
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top5.PNG?v=1738761296790"
+              alt="Top 5"
+            />
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top6.PNG?v=1738758221108"
+              alt="Top 6"
+            />
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top7.PNG?v=1738758221771"
+              alt="Top 7"
+            />
+            <img
+              class="clothing-item top"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/top8.PNG?v=1738758231243"
+              alt="Top 8"
+            />
+          </div>
+
+          <div
+            class="clothing-selection"
+            id="bottom-options"
+            style="display: none"
+          >
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/bottom1.PNG?v=1734859995920"
+              alt="Bottom 1"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/bottom2.PNG?v=1734860007074"
+              alt="Bottom 2"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom3.PNG?v=1738758194789"
+              alt="Bottom 3"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom4.PNG?v=1738758195729"
+              alt="Bottom 4"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom5.PNG?v=1738758209147"
+              alt="Bottom 5"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom6.PNG?v=1738758211021"
+              alt="Bottom 6"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom7.PNG?v=1738758212842"
+              alt="Bottom 7"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom8.PNG?v=1738758216549"
+              alt="Bottom 8"
+            />
+            <img
+              class="clothing-item bottom"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bottom9.PNG?v=1738758233420"
+              alt="Bottom 9"
+            />
+          </div>
+
+          <div
+            class="clothing-selection"
+            id="accessory-options"
+            style="display: none"
+          >
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes1.PNG?v=1738761254256"
+              alt="Accessory 1"
+            />
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes2.PNG?v=1738761252746"
+              alt="Accessory 2"
+            />
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes3.PNG?v=1738761245755"
+              alt="Accessory 3"
+            />
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes4.PNG?v=1738761250518"
+              alt="Accessory 4"
+            />
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes5.PNG?v=1738761248105"
+              alt="Accessory 5"
+            />
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes6.PNG?v=1738758203887"
+              alt="Accessory 6"
+            />
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes7.PNG?v=1738758205423"
+              alt="Accessory 7"
+            />
+            <img
+              class="clothing-item accessory"
+              src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/shoes8.PNG?v=1738758207827"
+              alt="Accessory 8"
+            />
+          </div>
+
+          <div class="outfit-actions">
+            <button id="resetButton">Reset Outfit</button>
+            <button id="save-outfit-btn">Save Outfit</button>
+            <button id="update-outfit-btn" style="display: none">
+              Update Outfit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="saved-outfits-container"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Meya's Vogue. All rights reserved.</p>
+      <p><strong>References:</strong></p>
+
+      <p>
+        NEVIL Company. (2019). <em>MyLittleStar</em> (Version 1.0.8) [Mobile
+        App]. App Store.
+      </p>
+      <p>
+        Valvateria. (2024, August 10).
+        <em>𐙚˚˖ Dress up game playlist ୭˚. ᵎᵎ</em> [Video]. YouTube.
+        <a href="https://youtu.be/8C0XIck87-8" target="_blank"
+          >https://youtu.be/8C0XIck87-8</a
+        >
+      </p>
+    </footer>
+
+    <script src="dressingscript.js"></script>
+  </body>
+</html>

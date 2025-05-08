@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun random challenges for styling outfits in Meya's Vogue!">
+    <meta name="author" content="Your Name">
+    <title>Tasks - Meya's Vogue</title>
+    <link rel="icon" href="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/favicon.png?v=1734875600934" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div class="top-right-profile">
+  <a id="profileDynamicLink" href="/form">
+    <img id="profileDynamicPic" src="https://your-default-image-url.png" alt="Profile" class="profile-icon" />
+  </a>
+</div>
+
+    <header>
+        <h1>Meya's Vogue : Tasks</h1>
+        <!-- Hamburger Menu Button (Left-aligned) -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navigation Menu -->
+         <nav id="nav-menu">
+            <a href="index.html">Home 🏠</a>
+            <a href="dressing-room.html">Dressing Room 👗</a>
+            <a href="gallery.html">Gallery 🖼️</a>
+            <a href="tasks.html">Tasks 📝</a>
+            <a href="about-us.html">About Us ℹ️</a>
+        </nav>
+    </header>
+
+   <!-- Sidebar with music button -->
+   <audio id="bg-music" autoplay loop controls>
+        <source src="https://cdn.glitch.me/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/dressupbg?v=1738476588838" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+  
+    <h2>Fashion Challenges ⋆˚✿˖°</h2>
+
+    <section class="task-content-wrapper">
+        <div class="carousel-container">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel">
+                <img src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/tasksimage1.jpeg?v=1738686731947" class="carousel-slide" alt="Fashion Challenge 1">
+                <img src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/tasksimage2.jpeg?v=1738686736077" class="carousel-slide" alt="Fashion Challenge 2">
+                <img src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/tasksimage3.jpeg?v=1738686739402" class="carousel-slide" alt="Fashion Challenge 3">
+                <img src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/tasksimage4.jpeg?v=1738686724506" class="carousel-slide" alt="Fashion Challenge 4">
+            </div>
+             <caption>Inspiration Pictures</caption>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="task-info">
+            <p>The Tasks page gives users fun fashion challenges to complete. These challenges ask players to create a specific type of look. These tasks keep the game interesting by encouraging users to try new ideas and experiment with different outfits.</p>
+            <p>There are also daily tasks that users can complete each day. These tasks encourage players to come back to the game and keep trying new fashion styles. Making the game more fun and giving users new goals to aim for every day.</p>
+        </div>
+    </section>
+
+    <div class="task-box">
+        <h2>Tasks!</h2>
+        <p id="task">Click the button to get a new task!</p>
+        <button onclick="generateTask()">Get New Task</button>
+        <button id="taskButton" onclick="completeTask()">Complete Task</button>
+    </div>
+
+    <!-- Pop-up modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupText">Great job! Task complete!</p>
+            <button id="closePopup" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+
+    <footer>
+    <p>&copy; 2024 Meya's Vogue. All rights reserved.</p>
+    <p><strong>References:</strong></p>
+    <div class="sources">
+        <p>
+        Valvateria. (2024, August 10). <em>𐙚˚˖ Dress up game playlist ୭˚. ᵎᵎ</em> [Video]. YouTube. 
+        <a href="https://youtu.be/8C0XIck87-8" target="_blank">YouTube Link</a>
+        </p>
+      
+        <p>Unknown Author. (n.d.). <em>Diary of a Model</em> [Pinterest post]. Pinterest. Retrieved February 5, 2025, from 
+            <a href="https://pin.it/35kpwzf3Y" target="_blank">https://pin.it/35kpwzf3Y</a>
+        </p>
+
+        <p>Unknown Author. (n.d.). <em>Fashion show, Model aesthetic, Model life</em> [Pinterest post]. Pinterest. Retrieved February 5, 2025, from 
+            <a href="https://pin.it/3qFNpjWjC" target="_blank">https://pin.it/3qFNpjWjC</a>
+        </p>
+
+        <p>Unknown Author. (n.d.). <em>#runway #fashion</em> [Pinterest post]. Pinterest. Retrieved February 5, 2025, from 
+            <a href="https://pin.it/5W322Dqw2" target="_blank">https://pin.it/5W322Dqw2</a>
+        </p>
+
+        <p>Unknown Author. (n.d.). <em>Fashion Inspiration & Trends</em> [Pinterest post]. Pinterest. Retrieved February 5, 2025, from 
+            <a href="https://pin.it/3sfyTGbZW" target="_blank">https://pin.it/3sfyTGbZW</a>
+        </p>
+        <p>
+            NEVIL Company. (2019). <em>MyLittleStar</em> (Version 1.0.8) [Mobile App]. App Store. 
+            <a href="https://apps.apple.com/us/app/mylittlestar/id1455377164" target="_blank">App Link</a>
+        </p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

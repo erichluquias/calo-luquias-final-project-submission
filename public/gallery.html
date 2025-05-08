@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery of stylish outfits from Meya's Vogue!">
+    <meta name="author" content="Erich Amia Luquias, Mischka Calo">
+    <title>Gallery - Meya's Vogue</title>
+    <link rel="icon" href="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/favicon.png?v=1734875600934" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+    <div class="top-right-profile">
+  <a id="profileDynamicLink" href="/form">
+    <img id="profileDynamicPic" src="https://your-default-image-url.png" alt="Profile" class="profile-icon" />
+  </a>
+</div>
+
+    <header>
+        <h1>Meya's Vogue : Gallery</h1>
+        <!-- Hamburger Menu Button (Left-aligned) -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navigation Menu -->
+        <nav id="nav-menu">
+            <a href="index.html">Home 🏠</a>
+            <a href="dressing-room.html">Dressing Room 👗</a>
+            <a href="gallery.html">Gallery 🖼️</a>
+            <a href="tasks.html">Tasks 📝</a>
+            <a href="about-us.html">About Us ℹ️</a>
+        </nav>
+    </header>
+
+   <!-- Sidebar with music button, volume control, and image -->
+    <audio id="bg-music" autoplay loop controls>
+        <source src="https://cdn.glitch.me/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/dressupbg?v=1738476588838" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <section>
+        <h2>Stylish Outfits ˙✧˖°📷 ༘ ⋆｡˚˙</h2>
+        <p>The Gallery is where users can see outfits made by themselves and other players. It uses a grid layout to display the outfits in an organized and attractive way. Each outfit is shown as an image, allowing users to get ideas and inspiration from others. Users can also save their own outfits and share them in the Gallery after creating them.</p>
+
+        <p>The Gallery is a great place to look for outfit ideas or to show off your own style. It’s easy to navigate and fun to explore. Players can feel proud of their creations when they add them to the Gallery, and it’s a place where everyone can celebrate fashion together.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/outfit1.png?v=1734873289450" alt="Outfit 1">
+                <p>Outfit Inspo 1</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/outfit2.png?v=1734873289752" alt="Outfit 2">
+                <p>Outfit Inspo 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/outfit3.png?v=1734873294432" alt="Outfit 3">
+                <p>Outfit Inspo 3</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://cdn.glitch.global/e28fc8ae-950a-4d5f-a021-71d44904200b/outfit4.png?v=1734873291671" alt="Outfit 4">
+                <p>Outfit Inspo 4</p>
+            </div>
+          
+          <div class="gallery-item">
+                <img src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/outfit5.jpg?v=1738761886573" alt="Outfit 5">
+                <p>Outfit Inspo 5</p>
+            </div>
+          
+           <div class="gallery-item">
+                <img src="https://cdn.glitch.global/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/outfit6.jpg?v=1738761905861" alt="Outfit 6">
+                <p>Outfit Inspo 6</p>
+            </div>
+          
+          
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meya's Vogue. All rights reserved.</p>
+        <p><strong>References:</strong></p>
+        <p>
+            NEVIL Company. (2019). <em>MyLittleStar</em> (Version 1.0.8) [Mobile App]. App Store. 
+            <a href="https://apps.apple.com/us/app/mylittlestar/id1455377164" target="_blank">App Link</a>
+        </p>
+      <p>Valvateria. (2024, August 10). <em>𐙚˚˖ Dress up game playlist ୭˚. ᵎᵎ</em> [Video]. YouTube. <a href="https://youtu.be/8C0XIck87-8" target="_blank">https://youtu.be/8C0XIck87-8</a></p>
+    </footer>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    const pfp = document.getElementById("profileDynamicPic");
+    const link = document.getElementById("profileDynamicLink");
+
+    if (user && pfp && link) {
+      pfp.src = user.profilePic;
+      link.href = "/settings/" + user.username;
+    }
+  });
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>

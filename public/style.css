@@ -1,0 +1,712 @@
+body {
+    background: url('https://i.pinimg.com/1200x/71/69/20/7169202324f6c047c9067f6211f0dda2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #5b3a70;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header {
+    background: #ffbad2;
+    padding: 20px;
+    border-bottom: 5px solid #ff8fab;
+    border-radius: 20px 20px 0 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px #ff87a0;
+    font-weight: bold;
+}
+
+
+.start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: white;
+    background: linear-gradient(to bottom, #ff87a0, #ffbad2);
+    border: 3px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.start-button:hover {
+    background: linear-gradient(to bottom, #ff4f7b, #ff87a0);
+    transform: scale(1.1);
+}
+
+
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffbad2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hamburger Menu Button (Left-aligned) */
+.hamburger {
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;  /* Keep the hamburger menu fixed */
+    top: 20px;
+    left: 20px;  /* Keep it left-aligned */
+    z-index: 20;  /* Ensure it's above other elements */
+}
+
+/* Navigation Menu */
+nav {
+    position: fixed;  /* Make nav fixed at the top */
+    top: 60px;        /* Move it below the header */
+    left: 20px;
+    display: none;  /* Hide by default */
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px dashed #ff87a0;
+    z-index: 10;  /* Ensure the nav stays above other elements */
+}
+
+/* Links */
+nav a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to bottom, #ff87a0, #ffbad2);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 3px dashed white;
+    text-align: center;
+}
+
+nav a:hover {
+    background: linear-gradient(to bottom, #ff4f7b, #ff87a0);
+    transform: scale(1.1);
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar button {
+    background: linear-gradient(to bottom, #ffbad2, #ff87a0);
+    color: white;
+    border: 3px dashed white;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: linear-gradient(to bottom, #ff4f7b, #ff87a0);
+    transform: scale(1.1);
+}
+
+/* Sidebar Image */
+.sidebar img {
+    width: 100px;
+    border-radius: 50%;
+    border: 3px dashed white;
+    margin-top: 15px;
+}
+
+footer {
+    background: #ff8fab;
+    color: white;
+    padding: 15px;
+   text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+    
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Hamburger and Navigation */
+nav a {
+    display: block;
+    font-size: 1.5em;
+}
+
+/* Show navigation when the menu is active */
+#nav-menu.active {
+    display: flex;
+    flex-direction: column;  /* Ensure the links stack vertically */
+}
+
+/* Make nav always hidden unless clicked */
+@media (max-width: 768px) {
+    /* Navigation menu shown only when hamburger is clicked */
+    nav {
+        display: none;  /* Hide by default */
+    }
+
+    nav.active {
+        display: flex; /* Show when clicked */
+    }
+
+    /* Styling the hamburger button */
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Navigation stays hidden on larger screens */
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Gallery Styling */
+.gallery-grid, .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fffafc;
+    margin: 20px auto;
+    border: 5px solid #fadeea;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item, .gallery .gallery-item {
+    text-align: center;
+}
+
+.gallery-item img, .gallery img {
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  width: 200px;
+length: 200px;
+}
+
+.gallery-item img:hover, .gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #5f4b56;
+}
+
+
+
+/* Main page container */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 100px;
+}
+
+/* Task Content Wrapper - for carousel and task info */
+.task-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Carousel should take 50% width */
+.carousel-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Task info section - takes 50% width */
+.task-info {
+    flex: 1;
+    max-width: 50%;
+    background-color: #fadeea;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #5f4b56;
+    text-align: left;
+}
+
+/* Task container for buttons */
+.task-box {
+    width: 60%;
+    background-color: #fffafc;
+    padding: 30px;
+    border: 5px solid #fadeea;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Carousel layout */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: #fadeea;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Carousel image settings */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Positioning carousel buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Buttons */
+.task-box button {
+    padding: 12px 24px;
+    background-color: #fadeea;
+    color: #5f4b56;
+    font-size: 1.1em;
+    border: 2px solid #96687b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.task-box button:hover {
+    background-color: #96687b;
+    color: #fffafc;
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #ffbad2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #96687b;
+    color: #fff;
+}
+
+/* Floating Audio Player Design */
+#bg-music {
+    position: fixed;
+    bottom: 20px;  /* Distance from the bottom of the screen */
+    right: 20px;   /* Distance from the right side of the screen */
+    z-index: 1000; /* Keeps it above other content */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Space inside the audio player */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 2px solid #333; /* Thin border around the player */
+    backdrop-filter: blur(10px); /* Optional: blurred background effect */
+}
+
+/* Style for the controls (like volume and play buttons) */
+#bg-music::-webkit-media-controls-panel {
+    background-color: rgba(255, 255, 255, 0.9); /* Control panel background */
+    border-radius: 8px; /* Rounded edges for control panel */
+}
+
+#bg-music::-webkit-media-controls-play-button {
+    background-color: #ff4081; /* Custom color for the play button */
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#bg-music::-webkit-media-controls-volume-slider {
+    background-color: #ff4081; /* Custom volume slider color */
+}
+
+/* Optional: Add hover effect to show it's interactive */
+#bg-music:hover {
+    transform: scale(1.05); /* Slightly enlarge when hovered */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+/* Page Layout */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Main Content */
+.main-content {
+    width: 65%;
+}
+
+/* Chatbox Styling */
+.chat-container {
+    width: 30%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.chat-header {
+    background: #ff79c6;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+}
+
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    padding: 8px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column-reverse;
+    background: #f7f7f7;
+    border-radius: 0 0 8px 8px;
+}
+
+.message {
+    background: white;
+    padding: 6px;
+    border-radius: 6px;
+    margin: 4px 0;
+    font-size: 13px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message strong {
+    color: #ff79c6;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .main-content, .chat-container {
+        width: 100%;
+    }
+}
+
+
+.form-wrapper {
+  background-color: #fff0f5;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 8px 16px rgba(255, 192, 203, 0.3);
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.profile-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ffc0cb;
+  border-radius: 8px;
+  background-color: #fffafc;
+}
+
+.save-button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.save-button:hover {
+  background-color: #ff85c1;
+}
+
+
+
+.top-right-profile {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.profile-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff69b4;
+  box-shadow: 0 0 8px rgba(255, 192, 203, 0.4);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
+}
+
+
+
+
+/* TOP NAVBAR */
+.settings-navbar {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffe6f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 20px;
+  border-bottom: 2px solid #ffb6c1;
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-pfp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ff69b4;
+}
+
+
+
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.settings-form {
+  display: flex;
+  gap: 40px;
+  background: #ffeaf4;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(255, 192, 203, 0.3);
+}
+
+/* Profile image + input */
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-pfp {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff69b4;
+}
+
+/* Form fields */
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-fields label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.form-fields input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+.save-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #ff85c1;
+}
+
+/* Button container below form */
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+  padding-right: 10px;
+}
+
+/* Delete & Logout buttons */
+.delete-btn,
+.logout-link {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.delete-btn {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 2px solid #cc0000;
+}
+
+.delete-btn:hover {
+  background-color: #ffcccc;
+}
+
+.logout-link {
+  background-color: #fff0f5;
+  color: #c71585;
+  border: 2px solid #c71585;
+}
+
+.logout-link:hover {
+  background-color: #fce6f3;
+}
+
+
+
+/* Pretty Show Password toggle */
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #d63384;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.show-password input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #ff69b4;
+  cursor: pointer;
+}
